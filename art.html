@@ -60,9 +60,10 @@
         max-width: 60%; /* limit the image size to the width of its container */
       }
       .gallery-container {
-       overflow: auto; /* Change overflow to "auto" */
-       position: relative;
-      }
+	  overflow: hidden;
+  	position: relative;
+  	width: 100%; /* Add this line to set the width to 100% */
+}
   	   .gallery {
  	      display: flex;
  	       justify-content: center;
