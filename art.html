@@ -179,16 +179,16 @@ function scrollGallery(direction) {
     isScrolling = true;
     prevScrollAmount = scrollAmount;
     if (direction === 'prev') {
-      scrollAmount -= gallery.clientWidth;
-      if (scrollAmount < 0) {
-        scrollAmount = 0;
-      }
-    } else if (direction === 'next') {
-      scrollAmount += gallery.clientWidth;
-      if (scrollAmount > gallery.scrollWidth - gallery.clientWidth) {
-        scrollAmount = gallery.scrollWidth - gallery.clientWidth;
-      }
-    }
+  scrollAmount -= gallery.firstElementChild.clientWidth; // Use first image's width
+  if (scrollAmount < 0) {
+    scrollAmount = 0;
+  }
+} else if (direction === 'next') {
+  scrollAmount += gallery.firstElementChild.clientWidth; // Use first image's width
+  if (scrollAmount > gallery.scrollWidth - gallery.clientWidth) {
+    scrollAmount = gallery.scrollWidth - gallery.clientWidth;
+  }
+}
     gallery.style.transform = `translateX(-${scrollAmount}px)`;
     setTimeout(() => {
       isScrolling = false;
