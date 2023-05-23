@@ -106,24 +106,59 @@
     p {
       margin-bottom: 20px; /* add 20px margin to the bottom of each paragraph */
     }
+	    
 	.prev-btn:before,
-	.next-btn:before {
+	.prev-btn:after,
+	.next-btn:before,
+	.next-btn:after {
 	  content: "";
 	  display: block;
 	  width: 16px;
 	  height: 16px;
 	  border-width: 2px;
 	  border-style: solid;
-	  border-color: lightgray;
+	  border-color: #ffffff; /* Change the border color to white */
 	  border-left-color: transparent;
 	  border-top-color: transparent;
-	  transform: rotate(-45deg);
+	  position: absolute;
 	}
 
 	.next-btn:before {
-	  transform: rotate(135deg);
+	  transform: rotate(-145deg);
 	}
+.prev-btn:after,
+.next-btn:after {
+  transform: rotate(45deg);
+}
 
+.prev-btn:before {
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+  margin: -8px 0 0 -8px;
+}
+
+.prev-btn:after {
+  top: 50%;
+  left: 50%;
+  transform-origin: 100% 100%;
+  margin: 0 0 -8px -8px;
+}
+
+.next-btn:before {
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+  margin: -8px 0 0 -8px;
+}
+
+.next-btn:after {
+  top: 50%;
+  left: 50%;
+  transform-origin: 100% 100%;
+  margin: 0 0 -8px -8px;
+}
+	    
        </style>
       </head>
      <body oncontextmenu="return false;">
