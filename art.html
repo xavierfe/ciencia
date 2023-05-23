@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Arte</title>
-    <style>
+       <style>
       body {
         background-color: #ffffff; /* white color */
         margin: 0; /* remove default margin */
@@ -60,7 +60,7 @@
         margin: auto; /* center the image horizontally */
         max-width: 100%; /* limit the image size to the width of its container */
       }
-      
+     
       .gallery-container {
        overflow: hidden;
        position: relative;
@@ -77,21 +77,14 @@
       }
       .prev-btn,
       .next-btn {
-       position: absolute;
-	  top: 50%;
-	  transform: translateY(-50%);
-	  background-color: transparent;
-	  border: none;
-	  cursor: pointer;
-	  font-size: 2rem;
-	  color: lightgray;
-	  width: 40px; /* Add a width for the buttons */
-	  height: 40px; /* Add a height for the buttons */
-	  border-radius: 50%; /* Apply border-radius to create a circle shape */
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  padding: 0; /* Remove padding to ensure the circle is fully round */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+	color: lightgray;
       }
         .prev-btn {
         left: 0;
@@ -99,66 +92,9 @@
         .next-btn {
         right: 0;
       }
-	.prev-btn span,
-	.next-btn span {
-  	line-height: 1; /* Adjust the line-height to center the arrow inside the circle */
-	}
     p {
       margin-bottom: 20px; /* add 20px margin to the bottom of each paragraph */
     }
-	    
-	.prev-btn:before,
-	.prev-btn:after,
-	.next-btn:before,
-	.next-btn:after {
-	  content: "";
-	  display: block;
-	  width: 16px;
-	  height: 16px;
-	  border-width: 2px;
-	  border-style: solid;
-	  border-color: #ffffff; /* Change the border color to white */
-	  border-left-color: transparent;
-	  border-top-color: transparent;
-	  position: absolute;
-	}
-
-	.next-btn:before {
-	  transform: rotate(-145deg);
-	}
-.prev-btn:after,
-.next-btn:after {
-  transform: rotate(45deg);
-}
-
-.prev-btn:before {
-  top: 50%;
-  left: 50%;
-  transform-origin: 0 0;
-  margin: -8px 0 0 -8px;
-}
-
-.prev-btn:after {
-  top: 50%;
-  left: 50%;
-  transform-origin: 100% 100%;
-  margin: 0 0 -8px -8px;
-}
-
-.next-btn:before {
-  top: 50%;
-  left: 50%;
-  transform-origin: 0 0;
-  margin: -8px 0 0 -8px;
-}
-
-.next-btn:after {
-  top: 50%;
-  left: 50%;
-  transform-origin: 100% 100%;
-  margin: 0 0 -8px -8px;
-}
-	    
        </style>
       </head>
      <body oncontextmenu="return false;">
