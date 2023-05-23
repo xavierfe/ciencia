@@ -77,14 +77,20 @@
       }
       .prev-btn,
       .next-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        font-size: 2rem;
-	color: lightgray;
+       position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  background-color: transparent;
+	  border: none;
+	  cursor: pointer;
+	  font-size: 2rem;
+	  color: lightgray;
+	  width: 40px; /* Add a width for the buttons */
+	  height: 40px; /* Add a height for the buttons */
+	  border-radius: 50%; /* Apply border-radius to create a circle shape */
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
       }
         .prev-btn {
         left: 0;
@@ -92,6 +98,10 @@
         .next-btn {
         right: 0;
       }
+	.prev-btn span,
+	.next-btn span {
+  	line-height: 1; /* Adjust the line-height to center the arrow inside the circle */
+	}
     p {
       margin-bottom: 20px; /* add 20px margin to the bottom of each paragraph */
     }
@@ -162,8 +172,8 @@
 	  <img src="https://xavierfe.github.io/frankxavier/FXF_8839-Edit.jpg">
 	  <img src="https://xavierfe.github.io/frankxavier/FXF_9416-2-Edit-2.jpg">
   </div>
-  <button class="prev-btn">&lt;</button>
-  <button class="next-btn">&gt;</button>
+  <button class="prev-btn"><span>&lt;</span></button>
+  <button class="next-btn"><span>&gt;</span></button>
 </div>
 
 <script>
