@@ -179,14 +179,14 @@ function scrollGallery(direction) {
     isScrolling = true;
     prevScrollAmount = scrollAmount;
     if (direction === 'prev') {
-      scrollAmount -= gallery.offsetWidth;
+      scrollAmount -= gallery.clientWidth;
       if (scrollAmount < 0) {
         scrollAmount = 0;
       }
     } else if (direction === 'next') {
-      scrollAmount += gallery.offsetWidth;
-      if (scrollAmount > gallery.scrollWidth - gallery.offsetWidth) {
-        scrollAmount = gallery.scrollWidth - gallery.offsetWidth;
+      scrollAmount += gallery.clientWidth;
+      if (scrollAmount > gallery.scrollWidth - gallery.clientWidth) {
+        scrollAmount = gallery.scrollWidth - gallery.clientWidth;
       }
     }
     gallery.style.transform = `translateX(-${scrollAmount}px)`;
@@ -195,6 +195,7 @@ function scrollGallery(direction) {
     }, 300);
   }
 }
+
 
 prevBtn.addEventListener('click', () => {
   scrollGallery('prev');
