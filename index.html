@@ -76,8 +76,15 @@
     </div>
     <div class="container">
       <div class="content">
-        <img src="https://xavierfe.github.io/science/FXF_3944-Edit.jpg" alt="CTD">
-        <!-- your website content goes here -->
+       <img class="zoom-out-image" img src="https://xavierfe.github.io/science/FXF_3944-Edit.jpg" alt="Image">
+	      
+	      .zoom-out-image {
+  transition: transform 0.5s ease-out; /* Add a transition for smooth animation */
+}
+
+.zoom-out-image:hover {
+  transform: scale(0.8); /* Apply a scale transform to zoom out the image on hover */
+}
       </div>
     </div>
   </body>
