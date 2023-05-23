@@ -61,13 +61,32 @@
         padding: 0 20px; /* add padding to the sides of the container */
       }
 	    	      
-	      .zoom-out-image {
-  transition: transform 0.5s ease-out; /* Add a transition for smooth animation */
-}
+      .zoom-out-image {
+        transition: transform 0.5s ease-out; /* Add a transition for smooth animation */
+     }
+      .zoom-out-image:hover {
+        transform: scale(0.8); /* Apply a scale transform to zoom out the image on hover */
+     }
+      .image-container {
+	  position: relative;
+	  display: inline-block;
+      }
+      .caption {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	background-color: rgba(0, 0, 0, 0.7);
+  	color: #ffffff;
+  	padding: 10px;
+  	opacity: 0;
+  	transition: opacity 0.3s;
+	}
 
-.zoom-out-image:hover {
-  transform: scale(0.8); /* Apply a scale transform to zoom out the image on hover */
-}
+	.image-container:hover .caption {
+	  opacity: 1;
+	}
+
     </style>
   </head>
   <body>
@@ -83,9 +102,12 @@
       <a href="https://xavierfe.github.io/ciencia/cv.html">CV</a>
     </div>
     <div class="container">
-      <div class="content">
+     <div class="image-container"> 
        <img class="zoom-out-image" img src="https://xavierfe.github.io/science/FXF_3944-Edit.jpg" alt="Image">
-
+  <div class="caption">Your Text Here</div>
+</div>
+	      
+	      
       </div>
     </div>
   </body>
