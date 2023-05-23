@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Arte</title>
@@ -44,39 +45,40 @@
         color: #000000; /* black text color when hovering over links */
       }
       .content {
-        max-width: 600px; /* limit the width of the content */
+        max-width: 800px; /* limit the width of the content */
         margin: auto; /* center the content horizontally */
         padding: 20px; /* add padding around the content */
         text-align: center; /* center the text within the content div */
       }
       .container {
+        max-width: 1200px; /* set the maximum width of the container */
         margin: 0 auto; /* center the container horizontally */
         padding: 0 20px; /* add padding to the sides of the container */
       }
       img {
         display: block; /* make image display as a block element */
         margin: auto; /* center the image horizontally */
-        max-width: 60%; /* limit the image size to the width of its container */
+        max-width: 100%; /* limit the image size to the width of its container */
+      }
+      .container {
+        max-width: 1200px; /* set the maximum width of the container */
+        margin: 0 auto; /* center the container horizontally */
+        padding: 0 20px; /* add padding to the sides of the container */
       }
       .gallery-container {
-	  overflow: hidden;
-  	position: relative;
-  
-}
-  	   .gallery {
- 	    display: flex;
-	  justify-content: center;
-  	transition: transform 0.3s ease-in-out;
-  	flex-wrap: wrap; /* Add this line to allow images to wrap to the next line */
-}
-	.gallery img {
-  display: block;
-  width: auto; /* Change from width: 40%; to width: auto; */
-  height: auto;
-  object-fit: cover;
-  max-width: 100%; /* Change from max-width: 40%; to max-width: 100%; */
-  max-height: 100%; /* Change from max-height: 40%; to max-height: 100%; */
-}
+       overflow: hidden;
+       position: relative;
+      }
+       .gallery {
+       white-space: nowrap;
+       font-size: 0;
+       transition: transform 0.3s ease-in-out;
+      }
+      .gallery img {
+       display: inline-block;
+       width: 800px;
+       height: auto;
+      }
       .prev-btn,
       .next-btn {
         position: absolute;
@@ -86,7 +88,7 @@
         border: none;
         cursor: pointer;
         font-size: 2rem;
-	color: lightgray; /*transparent would make it invisible */
+	color: lightgray;
       }
         .prev-btn {
         left: 0;
@@ -113,13 +115,14 @@
       margin-bottom: 20px; /* add 20px margin to the bottom of each paragraph */
     }
     </style>
-	 <p>  
+    <p>  
     <div class="container">
        <div class="content">      
-	    </div>
-	  </div>
-	    </p>
-	
+     </p>
+
+  </body>
+</html>
+
 <div class="gallery-container">
   <div class="gallery">
 	  <img src="https://xavierfe.github.io/frankxavier/FXF_4340-Edit.jpg">
@@ -180,23 +183,22 @@ function scrollGallery(direction) {
     isScrolling = true;
     prevScrollAmount = scrollAmount;
     if (direction === 'prev') {
-  scrollAmount -= gallery.firstElementChild.clientWidth; // Use first image's width
-  if (scrollAmount < 0) {
-    scrollAmount = 0;
-  }
-} else if (direction === 'next') {
-  scrollAmount += gallery.firstElementChild.clientWidth; // Use first image's width
-  if (scrollAmount > gallery.scrollWidth - gallery.clientWidth) {
-    scrollAmount = gallery.scrollWidth - gallery.clientWidth;
-  }
-}
+      scrollAmount -= gallery.offsetWidth;
+      if (scrollAmount < 0) {
+        scrollAmount = 0;
+      }
+    } else if (direction === 'next') {
+      scrollAmount += gallery.offsetWidth;
+      if (scrollAmount > gallery.scrollWidth - gallery.offsetWidth) {
+        scrollAmount = gallery.scrollWidth - gallery.offsetWidth;
+      }
+    }
     gallery.style.transform = `translateX(-${scrollAmount}px)`;
     setTimeout(() => {
       isScrolling = false;
     }, 300);
   }
 }
-
 
 prevBtn.addEventListener('click', () => {
   scrollGallery('prev');
@@ -215,6 +217,3 @@ window.addEventListener('resize', () => {
   gallery.style.transform = `translateX(-${scrollAmount}px)`;
 });
 </script>
-	  
-</body>
-</html>
