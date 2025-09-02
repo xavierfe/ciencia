@@ -1,74 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Curriculum vitae</title>
+    <meta charset="utf-8" />
+    <title>Curriculum Vitae</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+      :root { --border:#e5e7eb; --muted:#6b7280; --link:#111827; }
+      * { box-sizing: border-box; }
       body {
-        background-color: #ffffff; /* white color */
-        margin: 0; /* remove default margin */
-        padding: 0; /* remove default padding */
+        background:#fff; margin:0; padding:0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        color:#111827; line-height:1.6;
       }
-      .header {
-        height: 75px; /* set the height of the header */
-        text-align: center; /* center the content horizontally */
-        position: relative;
-      }
-       
-      .header a {
-	  position: absolute;
- 	 top: 0;
- 	 right: 0;
-	 margin: 10px;
-	 color: #A9A9A9;
-	 text-decoration: none;
-      }
+      .header { height:75px; display:flex; align-items:center; justify-content:flex-end; max-width:1200px; margin:0 auto; padding:0 20px; }
+      .header a { color:#a9a9a9; text-decoration:none; }
       .navbar {
-        background-color: #ffffff; /* white color for navbar */
-        overflow: hidden; /* hide overflowing content */
-        text-align: center; /* center the links horizontally */
-        width: 100%; /* set the width to 100% of its container */
-        max-width: 1200px; /* set a maximum width to prevent it from expanding too much */
-        margin: 0 auto; /* center the navbar horizontally */
+        background:#fff; text-align:center; width:100%; max-width:1200px; margin:0 auto;
+        border-top:1px solid var(--border); border-bottom:1px solid var(--border);
       }
-      .navbar a {
-        display: inline-block; /* make links display as block elements */
-        color: #000000; /* black text color for links */
-        text-align: center; /* center the text within the links */
-        padding: none; /* add padding around the links */
-        text-decoration: none; /* remove underline from links */
-      }
-      .navbar a:not(:last-child)::after {
-        content: "|"; /* add a separator after each link, except for the last one */
-        margin: 0 10px; /* add margin around the separator */
-        color: #000000; /* black color for the separator */
-      }
-      .navbar a:hover {
-        background-color: #dddddd; /* light gray color when hovering over links */
-        color: #000000; /* black text color when hovering over links */
-      }
-      .content {
-        max-width: 800px; /* limit the width of the content */
-        margin: auto; /* center the content horizontally */
-        padding: 20px; /* add padding around the content */
-        text-align: left; /* center the text within the content div */
-      }
-      .container {
-        max-width: 1200px; /* set the maximum width of the container */
-        margin: 0 auto; /* center the container horizontally */
-        padding: 0 20px; /* add padding to the sides of the container */
-      }
-      .image {
-        float: right; /* float the image to the right */
-        width: 40%; /* set the width of the image */
-        margin: 0 0 20px 20px; /* add margins to the image */
-	      <p> Art by Jeremy E. Schreier </p>
+      .navbar a { display:inline-block; color:#000; text-decoration:none; padding:12px 10px; }
+      .navbar a:not(:last-child)::after { content:"|"; margin:0 10px; color:#000; }
+      .navbar a:hover { background:#f3f4f6; color:#000; }
+      .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+      .content { max-width:800px; margin:0 auto; padding:24px 0; }
+      .image { float:right; width:40%; margin:0 0 20px 20px; }
+      .card { border:1px solid var(--border); border-radius:12px; padding:20px; margin-top:20px; }
+      .btn { display:inline-block; padding:12px 16px; border-radius:9999px; border:1px solid var(--border); text-decoration:none; color:var(--link); }
+      .btn:hover { background:#f9fafb; }
+      .muted { color:var(--muted); font-size:14px; }
+      @media (max-width:800px){
+        .image{ float:none; width:100%; margin:0 0 12px 0; }
+        .navbar a:not(:last-child)::after { display:none; }
+        .navbar a { padding:12px 8px; }
       }
     </style>
   </head>
   <body>
-    <div class="header">   
-       <a href="https://xavierfe.github.io/science/cv.html">English</a>
+    <div class="header">
+      <a href="https://xavierfe.github.io/science/cv.html">English</a>
     </div>
+
     <div class="navbar">
       <a href="https://xavierfe.github.io/ciencia/index.html">HOGAR</a>
       <a href="https://xavierfe.github.io/ciencia/about.html">SOBRE</a>
@@ -77,223 +48,34 @@
       <a href="https://xavierfe.github.io/ciencia/dei.html">EQUIDAD EN LA CIENCIA</a>
       <a href="https://xavierfe.github.io/ciencia/cv.html">CV</a>
     </div>
-	
-    <div class="container">  <p>
-	    <img src="https://xavierfe.github.io/science/Untitled_Artwork.jpg" alt="Art by Jeremy E. Schreier" class="image" style="max-width: 400px; height: auto;">
-	    <p><p style="text-align: right; font-size: 14px;">Ilustración por Jeremy E. Schreier</p>	</p>
-<div class="content">
-		</p>
 
+    <div class="container">
+      <div class="content">
+        <img src="https://xavierfe.github.io/science/Untitled_Artwork.jpg"
+             alt="Illustration by Jeremy E. Schreier" class="image" style="max-width:400px;height:auto;" />
+        <p class="muted" style="text-align:right;margin-top:0;">Ilustración por Jeremy E. Schreier</p>
 
-          <style>
-    p {
-      margin-bottom: 20px; /* add 20px margin to the bottom of each paragraph */
-    }
-  </style>
-	    <script>
-function openPopup() {
-  window.open('https://sites.google.com/view/anitra-ingalls/home?authuser=0', 'popup', 'width=500,height=500');
-}  
-function openPopup1() {
-  window.open('https://moranresearch.org/', 'popup', 'width=500,height=500');
-}  
-function openPopup2() {
-  window.open('https://ashley17061.wixsite.com/shadelab', 'popup', 'width=500,height=500');
-}    
-function openPopup3() {
-  window.open('https://handelsmanlab.discovery.wisc.edu/', 'popup', 'width=500,height=500');
-} 
-function openPopup4() {
-  window.open('https://www.uprm.edu/biology/rodriguez_minguela_carlos/', 'popup', 'width=500,height=500');
-} 
-function openPopup5() {
-  window.open('https://vivo.uprm.edu/display/n100000914', 'popup', 'width=500,height=500');
-} 
-</script>
-<p> FRANK XAVIER FERRER GONZÁLEZ, PHD <br>
-    LA ESCUELA DE OCEANOGRAFÍA <br>
-    SEATTLE, WA <br>
-<p>
-Contacto: xaquatic at uw dot edu or fferrergonzalez at whoi dot edu </p>
-        
-        <p> 
-<b>INTERESES DE INVESTIGACIÓN</b> 
-       </p> <p>       
-Interacciones microbianas en la superficie del océano. 
-	      <br>
-Redes que regulan la transferencia de carbono por parte de bacterioplancton heterotrófico.	
-	      <br>
-Adaptaciones de bacterias y fitoplancton a factores estresantes y entornos cambiantes
-	      <br>
-Uso de microbios como herramientas biológicas.	   
-</p> <p>
-<b>HISTORIAL ACADÉMICO  </b>	
-</p> <p>
-Investigador post-doctoral
-	      <br>
-Universidad de Washington (UW), Seattle, Washington
-</p> <p>	
-Educación 
-	      <br>
-Universidad de Georgia (UGA), Athens, Georgia 
-	      <br>
-PhD Ciencias Marinas, agosto 2022 
-	      <br>
-</p> <p>	      
-Universidad de Puerto Rico en Mayagüez (UPR-M), Mayagüez, Puerto Rico 
-	      <br>
-MSc Biología, mayo 2015	
-	      <br>
-BSc Microbiología Industrial, mayo 2011            
-</p> <p>
-<b>FORMACIÓN Y EXPERIENCIA DOCENTE</b>
-</p> <p>	      
-Entrenamiento científico
-	      <br>
-Investigador post-doctoral
-	      <br>
-	Redes entre microorganismos y betaína del Océano Pacífico ecuatorial, UW, (presente), PI: <a href="https://sites.google.com/view/anitra-ingalls/home?authuser=0" onclick="openPopup(); return false;"> Dr. Anitra E. Ingalls </a>
-</p>  
-<p>
-PhD <br>	    
-Las bacterias heterótrofas como sensores biológicos de los recursos exometabólicos del fitoplancton en la superficie del océano, UGA, (2022), Mentor: <a href="https://moranresearch.org/" onclick="openPopup1(); return false;"> Dr. Mary Ann Moran </a>
-</p> 
+        <div class="card">
+          <h1 style="margin-top:0;">Curriculum Vitae</h1>
+          <p>Puedes descargar mi CV aquí:</p>
 
- <p>
-MSc   <br>  
-•	Detección de resistencia a antibióticos en bibliotecas metagenómicas generadas a partir de suelo de cueva de Puerto Rico, UPRM (2015), Mentor: <a href="https://www.uprm.edu/biology/rodriguez_minguela_carlos//" onclick="openPopup4(); return false;"> Dr. Carlos Rodríguez Mingüela </a><br>
-•	Dominando la metagenómica en el laboratorio de la <a href="https://handelsmanlab.discovery.wisc.edu/" onclick="openPopup3(); return false;"> Dra. Jo Handelsman</a>, Yale University, New Hampshire CT, USA (2012), Mentor: <a href="https://ashley17061.wixsite.com/shadelab" onclick="openPopup2(); return false;"> Dr. Ashley Shade </a> <br> 
-</p>
-<p>
-BSc     <br>
-•	Construcción de Bibliotecas Metagenómicas Funcionales del Bosque Seco de Guánica, UPRM <br>
-(2010-11), Mentor:<a href="https://vivo.uprm.edu/display/n100000914" onclick="openPopup5(); return false;"> Dr. Carlos Ríos Velázquez </a> <br>
-•	Identificar y clasificar la flora rara y en peligro de extinción de Puerto Rico y la isla de Vieques, UPRM (2008-09), Mentor: Dr. Gary Breckon 
-</p> <p>
-Experiencias de enseñanza
-</p> <p>	      
-UGA: Asistente de aprendizaje de posgrado para Principios de biología (otoño 2021), <br>
-UPR-M: Instructor de laboratorio de genética (primavera, verano y otoño 2014), y genética bacteriana (otoño 2013) <br>
-Profesor: Ética, Integridad y RCR. (otoño 2014) <br>
-Asistente de laboratorio: Laboratorio de metagenómica (primavera 2014) <br>
-</p> <p>
-Publicaciones</p> <p>
-En preparacion</p> <p>
-Sacks, J.S., Carlson, L.T., Finch, A.H., Ferrer-González, F.X., Boysen, A.K., Heal, K.R., Karl, D.M., White, A.E., Sosa, O.A., Ingalls, A.E., Fluxes of glycine betaine and homarine through marine microbial communities, In revision at Limnology & Oceanography. <br>
-</p> <p>
-Durham, B.P.., Johnson, W.M., Bannon, C.C., Bertrand, E.M., Ingalls, A.E., Edwards, B.R., Apprill, A., Borges, R., Boysen, A., Bundy, R.M., Chen, H., Ferrer-González, F.X., Fiore, C., Heal, K.R., Kuhlisch, C., Liu, S., Lu, K., Meke, L., Pontrelli, S., Prabavathy, V.R., Reigel, A.M., Sacks, J.S., Schreier, J.E., Sekar, J., Uchimiya, M., Kujawinski, E.B., An ecological framework for microbial metabolites in the ocean ecosystem, In revision at Limnology & Oceanography Letters. <br>
-</p> <p>
-Olofsson M., Uchimiya M., Ferrer-González F.X., Schreier J.E., Powers M.A., Smith C.B., Edison A.S., Moran M.A. Exometabolite Profiling of Temperature-Acclimated Cultures of a Marine Diatom Using a Consilience Approach. To be submitted. <br>
-</p> <p>
-Publicadas</p> <p>
-</p> <p>  
-Hamilton, M., Ferrer‐González, F. X., & Moran, M. A. (2024). Heterotrophic bacteria trigger transcriptome remodelling in the photosynthetic picoeukaryote Micromonas commoda. Environmental Microbiology Reports, 16(3), e13285.<br>
-</p> <p>  
-Ferrer-González, F. X., Hamilton, M., Smith, C. B., Schreier, J. E., Olofsson, M., & Moran, M. A. (2023). Bacterial transcriptional response to labile exometabolites from photosynthetic picoeukaryote Micromonas commoda. ISME communications, 3(1), 5. <br>
-</p> <p>  
-Moran, M.A., Ferrer-González, F.X., Fu, H., Nowinski, B., Olofsson, M., Powers, M.A., Schreier, J.E., Schroer, W.F., Smith, C.B., and Uchimiya, M. (2022). The Ocean's labile DOC supply chain. Limnology and Oceanography.<br>
-</p> <p>  
-Olofsson, M., Ferrer-González, F.X., Uchimiya, M., Schreier, J.E., Holderman, N.R., Smith, C.B., Edison, A.S., Moran, M.A. (2022). Growth-stage-related shifts in diatom endometabolome composition set the stage for bacterial heterotrophy. ISME Communications, 2(1), 1-9.<br>
-</p> <p>  
-Holderman, N.R., Ferrer-González, F.X., Glushka, J., Moran, M.A., Edison, A.S. (Accepted). Dissolved organic metabolite extraction from high salt media. NMR in Biomedicine.<br>
-</p> <p>  
-Widner, B., Kido Soule, M. C., Ferrer-González, F. X., Moran, M. A., & Kujawinski, E. B. (2021). Quantification of Amine-and Alcohol-Containing Metabolites in Saline Samples Using Pre-extraction Benzoyl Chloride Derivatization and Ultrahigh Performance Liquid Chromatography Tandem Mass Spectrometry (UHPLC MS/MS). Analytical Chemistry, 93(11), 4809-4817.<br>
-</p> <p>  
-Ferrer-González, F. X., Widner, B., Holderman, N. R., Glushka, J., Edison, A. S., Kujawinski, E. B., & Moran, M. A. (2021). Resource partitioning of phytoplankton metabolites that support bacterial heterotrophy. The ISME journal, 15(3), 762-773.<br>
-</p> <p>  
-<b>PRESENTACIONES</b>
-</p> <p>	      
-1.	<b>Frank X. Ferrer-González</b>, Heterotrophic Microbial Use of Phytoplankton Exometabolomic Resources in the Surface Ocean, University of Washington, Seattle, Washington, abril 2023 <br>
-2.	<b>Frank X. Ferrer-González</b>, Brent Nowinski, Mary Ann Moran, Dynamic Heterotrophic Bacterial Strategies for Carbon Acquisition in a Coastal Phytoplankton Bloom, Gordon Research Conference, Les Diablerets, Switzerland, Primavera 2022, Poster <br>
-3.	<b>Frank X. Ferrer-González</b>, Flujo de carbono en la superficie del océano, Puerto Rican Virtual Research Talks, Zoom, Fall 2020, Oral <br>
-4.	<b>Frank X. Ferrer-González</b>, Mary Ann Moran, Resource Partitioning of Diatom Metabolites by Marine Bacterial Heterotrophy in the Surface Ocean, Marine Science Student Symposium, University of Georgia, Athens, GA, Otoño 2020, Oral <br>
-5.	Nicole Holderman, John Glushka, <b>Frank X. Ferrer-González</b>, Mary Ann Moran, Arthur Edison, Metabolomic strategies to elucidate interactions between phytoplankton and marine bacteria, Metabolomics Association of North America (MANA), Georgia Tech, GA, noviembre 2019, Poster <br>
-6.	Brittany Widner, Melissa Kido Soule, <b>Frank X. Ferrer-González</b>, Mary Ann Moran, Elizabeth Kujawinski, Quantification of Polar Dissolved Metabolites in Seawater and Diatom Cultures, Ocean Carbon and Biogeochemistry (OCB) Summer Workshop, Woods Hole, MA, junio 2019, Poster <br>
-7.	Nicole Holderman, John Glushka, Haris Panagos, <b>Frank X. Ferrer-González</b>, Mary Ann Moran, Arthur Edison, NMR Strategies to Understand Carbon Cycling in the Ocean, Experimental Nuclear Magnetic Resonance Conference (ENC), Asilomar Conference Center, Pacific Grove, CA, abril 2019, Poster <br>
-8.	<b>Frank X. Ferrer-González</b>, Mary Ann Moran, Resource-Based Niche Partitioning in Surface Ocean Heterotrophic Bacteria Growing on Diatom Derived Metabolites, Southeastern Biogeochemical Symposium (SBS), University of South Carolina, Columbia South Carolina, marzo 2019, Poster <br>
-9.	<b>Frank X. Ferrer-González</b>, Mary Ann Moran, Asking the Bacteria What Diatom Metabolites Support Heterotrophic Growth in the Surface Ocean, Association for the Science of Limnology and Oceanography (ASLO), Puerto Rico Convention Center, San Juan Puerto Rico, febrero 2019, Oral <br>
-10.	Brittany Widner, Melissa Kido Soule,<b> Frank X. Ferrer-González</b>, Mary Ann Moran, Elizabeth Kujawinski, A Novel Method for Quantification of Polar Dissolved Metabolites in Seawater, Association for the Science of Limnology and Oceanography (ASLO), Puerto Rico Convention Center, San Juan Puerto Rico, febrero 2019, Oral <br>
-11.	<b>Frank X. Ferrer-González</b>, Mary Ann Moran, Asking the Bacteria What Diatom Metabolites Support Heterotrophic Growth in the Surface Ocean, Association for the Science of Limnology and Oceanography (ASLO), Puerto Rico Convention Center, San Juan Puerto Rico, febrero 2019, Oral <br>
-12.	<b>Frank X. Ferrer-González</b>, Mary Ann Moran, Diatom Metabolites Support Heterotrophic Growth in the Surface Ocean, Annual Southeastern Branch American Society for Microbiology Meeting Microbial Dynamics and Infection, Georgia Tech, Atlanta GA, noviembre 2018, Oral <br>
-13.	<b>Frank X. Ferrer-González</b>, Mary Ann Moran, Phytoplankton Metabolites that Support Heterotrophic Growth in the Surface Ocean, Southeastern Biogeochemical Symposium (SBS) Florida State University, Tallahassee, FL abril 2018, Poster <br>
-14.	<b>Frank X. Ferrer-González</b>, Mary Ann Moran, Diatom derived metabolites that Support Heterotrophic Growth in the Surface Ocean, Suddath Symposium, The Chemical Ecology of Microbiome Interactions, Georgia Tech, Atlanta GA, enero 2018, Poster <br>
-</p> <p>
-<b>MENTORIA DE ESTUDIANTES GRADUADOS Y SUBGRADUADOS</b>
-</p> <p>	      
-1.	Susan Garcia, estudiante graduada, Otoño, 2022 - presente: Axenic diatom biosynthesis and release rates of low molecular weight metabolites from diatoms <br>
-2.	Sam Cryan, estudiante graduado, Otoño, 2022 - presente: Homarine degradation by heterotrophic bacterioplankton <br>
-3.	Nelly Wood, estudiante graduado, Integrative Life Science Rotation Program, University of Georgia,  Otoño, 2019: Determining bacterial kinetics from diatom substrates. <br>
-4.	Stephanie L. Stromp, estudiante subgraduada, Departmaneto de Biología, University of Georgia, 2016-2017: Bacteria-Phytoplankton Interactions in Understanding the Marine Carbon Cycle. <br>
-5.	Lidimarie Trujillo, estudiante subgraduada, Departmaneto de Biología, 2012-2014: Cultivable Approaches and Generation of Metagenomic Libraries from Soil for Functional Screening of Estrogen Metabolizing Candidates  <br>
-6.	Luis Morales, estudiante subgraduado, Programa de premédica, Programa de Microbiología Industrial, 2012-2013: Functional Screening of Thermal Tolerant Clones in Metagenomic Libraries <br>
-7.	Nader Rebhat, estudiante subgraduado, Programa de Microbiología Industrial, 2011-2012: Isolation of Cultivable Antibiotic Resistant Candidates from Soil of Cueva Ventana <br>
-8.	Cristian Acevedo, estudiante subgraduado, Programa de Microbiología Industrial, 2012: Isolation and characterization of different color spectra antibiotic resistant bacteria <br>
-9.	Hiram Morales, estudiante subgraduado, Programa de Microbiología Industrial, 2011: Screening for sulfur producing bacteria in soils of Puerto Rico <br>
-10.	Albin Cardona, estudiante graduado, 2012: Generation of Antibiotic Minimum Inhibiting Concentrations, Bacterial Growth Curves and Functional Antibiotic Resistance Screening  <br>
-11.	Ricky Padilla,estudiante subgraduado, Mayagüez Residential Center for Educational Opportunities CROEM, 2011: Isolation of Antibiotic like Substances from Plant Sources <br>
-12.	Giovanni González and Juliana Rodriguez Varella, Programa de desarrollo profesional, Science and Technology of Food Program and Teachers Development Program, 2011: Generation of a metagenomic library using the indirect method from cave Ventana. <br>
-</p> <p>
-<b>PREMIOS</b>
-</p> <p>	      
-1. 	Beca de investigación Post Doctoral por el programa de NSF C-CoMP <br>
-2.	Premio de viaje para estudiantes de la escuela graduada, 2022 <br>
-3.	Premio de viaje para estudiantes de la escuela graduada, 2017 <br>
-4.	Becario: Oportunidad de Reclutamiento de Graduados de la Universidad de Georgia. universidad de georgia, Athens, Georgia. agosto 2015 a mayo 2017. <br>
-5.	Conferencia Anual de la AAAS-División del Caribe: Enfermedades Infecciosas en los Trópicos-Segundo Lugar Premio Robert I. Larus. AAAS and Science Caribbean Division, University de Puerto Rico, Centro Medico, septiembre 2013. <br>
-6.	Instituto Nacional de Salud, Rise2Best UPR-M Fellow Universidad de Puerto Rico en Mayagüez. Grant No. NIH-R25GM088023 junio 2011 a mayo 2013. <br>
-7.	Beca de investigación subgraduada. Departamento de Agricultura de los Estados Unidos, Servicio Cooperativo de Investigación, Educación y Extensión del Estado (CSREES). GRANT NO. USDA-HSI-CSREES 2007-02386, enero a mayo 2011. <br>
-</p> <p>
-<b>SERVICIOS PUBLICOS Y PROFESIONALES</b>
-</p> <p>	      
-1.	Miembro del Subcomité de Vida Estudiantil de la Iniciativa DEI de Ciencias Marinas, University de Georgia, Athens, GA, 2020 a 2022. <br>
-2.	Miembro del Subcomité de Capacitación DEI de la Iniciativa DEI de Ciencias Marinas, University de Georgia, Athens, GA, 2020 a 2022.  <br>
-3.	Miembro del comité de Ciencias Marinas, Universidad de Georgia 2020 a 2022. <br>
-4.	Certificado en Diversidad e Inclusión (CDI) a través de la Oficina de Diversidad Institucional de la Universidad de Georgia, Athens, GA, Otoño 2021. <br>
-5.	Copresidente del Subcomité de Vida Estudiantil de la Iniciativa DEI de Ciencias Marinas, Universidad de Georgia, Athens, GA, 2020 a 2021. <br>
-6.	Co-líder, Primer Simposio del Departamento de Ciencias Marinas para Estudiantes de Escuela Graduada, Universidad de Georgia, Athens, GA, Otoño 2020.  <br>
-7.	Alcance a los estudiantes subrepresentados en Cedar Shoals High School: científicos oceánicos latinoamericanos y lo que hacemos, Athens, GA, febrero 2020. <br>
-8.	Zona STEM: ¿Qué son las ciencias marinas? Missouri Home Game, UGA, Athens, GA, noviembre 2019 <br>
-9.	Co-líder, One filter one family, suministrando 1000 filtros de agua a familias en Puerto Rico <br>
-10.	Líder, Equipo de respuesta de UGA para el huracán María, Athens, GA, otoño 2017 <br>
-11.	Comité Directivo de Graduados, Simposio Biogeoquímico del Sureste (SBS), University of Georgia, Athens, GA, Primavera, 2017. <br>
-12.	Mentor de Denzell Cross, Programa "Gateway to Graduate School (Summer Bridge)", Universidad de Georgia, Athens, GA, 2016 a 2017 <br>
-13.	Mentor de Walter Johnson, Programa "Gateway to Graduate School (Summer Bridge)", Universidad de Georgia, Athens, GA, 2016 a 2017 <br>
-14.	Mentor de Martin Douglass, Programa "Gateway to Graduate School (Summer Bridge)", Universidad de Georgia, Athens, GA, Verano 2016 <br>
-15.	Exposición fotográfica sobre Cambio Climático Naciones Unidas COP21, en colaboración con la Fondation Alliance Francaise París. Conferencia de las Naciones Unidas sobre el Cambio Climático, COP21, Paris, France, 2015 <br>
-16.	Fotoperiodista de Sea Grant Puerto Rico, Investigación: Cómo el cambio climático impacta la Costa Oeste de Perto Rico. Verano a otoño 2014 <br>
-17.	Fotógrafo del Programa Graduado del Departamento de Ingeniería Química de la Universidad de Puerto Rico en Mayagüez. Septiembre a octubre 2014 <br>
-18.	Fotoperiodista de Esta Vida Boricua, "A Life Narrative Project", Universidad de Puerto Rico en Mayagüez. Enero 2014 a 2015. <br>
-19.	Exposición de Fotografía: Cambio Climático y la Ciudad: ¿Estado de Emergencia? Feria de Cultura Urbana y la Fondation Alliance Francaise París, Mona Lisa at Rio Piedras, PR, 2014. <br>
-20.	Fotógrafo becario: Fondation Alliance Francaise París, San Juan Puerto Rico, 2014. <br>
-</p> <p>
-<b>CRUCEROS DE INVESTIGACIÓN Y EXPERIENCIA DE MUESTREO COSTERO</b>
-</p> <p>	      
-1.	Expedición DiNiMiTe (RC104) por el Puget Sound, WA, agosto a septiembre de 2023 <br>
-2.	Expedición Gradientes 5 (TN412), por el Pacífico Equatorial, enero a febrero 2023 <br>
-3.	Muestreo costero en la isla de Sapelo en GA, para el In Situ Chemotaxis Assay (ISCA), febrero 2019 <br>
-4.	NSF DMSP Initiative, por el Noreste del Pacífico, RV Oceanus, agosto 2017 <br>
-</p> <p>
-<b>HABILIDADES</b>
-</p> <p>	      
-Cultivo y aislamiento de organismos; bacterias (>10 años), fitoplancton (>6 años), hongos (1 año) y fagos (1 año). Técnicas moleculares en laboratorio; Manipulaciones de ADN/ARN y modificaciones genéticas bacterianas. bioinformática; transcriptómica, metagenómica ambiental, genes ortólogos, caracterización funcional de genes. Muestreo ambiental; barcos y muestreo costero. Computacional; R, Unix, Linux, Windows. Otros; Citometría de flujo, Fotografía científica, entre otros. Bilingüe; Competente en inglés y español.
-</p> <p>
-<b>ESTILO DE TRABAJO</b>
-</p> <p>	      
-Investigador independiente con excelentes habilidades de trabajo en equipo y con competencia cultural <br>
-Capaz de aprender nuevos conocimientos y adaptarse a entornos nuevos y cambiantes con facilidad <br>
-Dispuesto a realizar tareas básicas y avanzar para resolver problemas complejos <br>
-Bien organizado y orientado hacia nuevos descubrimientos <br>
+          <!-- PDF button -->
+          <!-- Optional: also offer a “View PDF” that opens in a new tab -->
+          <p>
+            <a class="btn"
+               href="https://raw.githubusercontent.com/xavierfe/science/main/2025_8_27_Frank_Xavier_Ferrer_Gonzalez_CV.pdf"
+               target="_blank" rel="noopener">
+              Descargar (PDF)
+            </a>
+          </p>
 
-        </p>
+          <p class="muted">Ultima actualización: 2025-Febrero-09</p>
+        </div>
       </div>
     </div>
-  <script>
-      window.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
-      });
+
+    <script>
+      window.addEventListener('contextmenu', function (e) { e.preventDefault(); });
     </script>
   </body>
 </html>
-
-
-	 
